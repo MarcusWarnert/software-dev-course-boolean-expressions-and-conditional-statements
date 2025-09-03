@@ -32,6 +32,7 @@ while (spellCheck !== correctSpelling) {
     console.log(incorrectSpellingMessage);
     spellCheck i++;
 }
+
 //At some point in the app there will need to be a list of all your recipes for the week which will have to hcange every week.
 let weeklyRecipes = [`
     [Sunday, Steak and Eggs], 
@@ -41,15 +42,15 @@ let weeklyRecipes = [`
     [Thursday, Loaded Nachos],
     [Friday, Bison Burgers],
     [Saturday, Butter Chicken]`];
-let question = readling.question("Do you like the order?")
-if (question === yes) {
+let question = readling.question("Do you like the order?")//Mispelled readline.question
+if (question === yes) {//Should be "yes"
     console.log("Good. Then we will proceed.")
-} else if (question === no) {
+} else if (question === no) {//Should be "no"
     const swapDays = readline.question("What days would you like to swap?")
     if ("Monday and Tuesday") {
-        [weeklyRecipes [1,1] =  weeklyRecipes [2,1]];//"Using Arrays" Depending on what the user inputs, 
-        console.log(`Monday and Tuesday have swapped recipes.`)
+        [weeklyRecipes [1,1] =  weeklyRecipes [2,1]];//"Using Arrays" Depending on what the user inputs, this will swap days.
+        console.log(`Monday and Tuesday have swapped recipes.`)//This should look more like weeklyRecipes[1] = weeklyRecipes[2];
     } else {
-        console.log("etc");//Then there would be a list of all the other possibilities, but that doesn't need to be done here as this example is enough
+        console.log("etc");//Then there would be a list of all the other possibilities, but that doesn't need to be done here as this example is enough.
     }
     }
